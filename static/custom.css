@@ -1,0 +1,32 @@
+/* Custom global overrides for theming — button colors use CSS variables */
+:root {
+  --color-button-bg: #043D8C; /* default blue */
+  --color-button-text: #ffffff;
+  --color-button-bg-hover: #032f6f;
+  --color-button-border: transparent;
+}
+
+button,
+.btn {
+  background-color: var(--color-button-bg) !important;
+  color: var(--color-button-text) !important;
+  border-color: var(--color-button-border) !important;
+}
+
+button:hover,
+.btn:hover {
+  background-color: var(--color-button-bg-hover) !important;
+}
+
+/* focus styles */
+button:focus,
+.btn:focus {
+  outline: 2px solid color-mix(in srgb, var(--color-button-bg) 40%, white 60%);
+  outline-offset: 2px;
+}
+
+/* Small variant for icon-only buttons where background shouldn't override */
+.btn-plain {
+  background-color: transparent !important;
+  color: inherit !important;
+}

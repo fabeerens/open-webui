@@ -53,21 +53,41 @@
 				if (localStorage.theme === 'system') {
 					document.documentElement.classList.add(prefersDarkTheme ? 'dark' : 'light');
 					metaThemeColorTag.setAttribute('content', prefersDarkTheme ? '#171717' : '#ffffff');
+					// button color variables for system theme
+					document.documentElement.style.setProperty('--color-button-bg', '#043D8C');
+					document.documentElement.style.setProperty('--color-button-text', '#ffffff');
+					document.documentElement.style.setProperty('--color-button-bg-hover', '#032f6f');
 				} else if (localStorage.theme === 'oled-dark') {
 					document.documentElement.style.setProperty('--color-gray-800', '#101010');
 					document.documentElement.style.setProperty('--color-gray-850', '#050505');
 					document.documentElement.style.setProperty('--color-gray-900', '#000000');
 					document.documentElement.style.setProperty('--color-gray-950', '#000000');
 					document.documentElement.classList.add('dark');
+					// button colors for oled-dark
+					document.documentElement.style.setProperty('--color-button-bg', '#043D8C');
+					document.documentElement.style.setProperty('--color-button-text', '#ffffff');
+					document.documentElement.style.setProperty('--color-button-bg-hover', '#032f6f');
 					metaThemeColorTag.setAttribute('content', '#000000');
 				} else if (localStorage.theme === 'light') {
 					document.documentElement.classList.add('light');
+					// button colors for light theme
+					document.documentElement.style.setProperty('--color-button-bg', '#043D8C');
+					document.documentElement.style.setProperty('--color-button-text', '#ffffff');
+					document.documentElement.style.setProperty('--color-button-bg-hover', '#032f6f');
 					metaThemeColorTag.setAttribute('content', '#ffffff');
 				} else if (localStorage.theme === 'her') {
 					document.documentElement.classList.add('her');
+					// button colors for her theme
+					document.documentElement.style.setProperty('--color-button-bg', '#043D8C');
+					document.documentElement.style.setProperty('--color-button-text', '#ffffff');
+					document.documentElement.style.setProperty('--color-button-bg-hover', '#032f6f');
 					metaThemeColorTag.setAttribute('content', '#983724');
 				} else {
 					document.documentElement.classList.add('dark');
+					// default dark button colors
+					document.documentElement.style.setProperty('--color-button-bg', '#043D8C');
+					document.documentElement.style.setProperty('--color-button-text', '#ffffff');
+					document.documentElement.style.setProperty('--color-button-bg-hover', '#032f6f');
 					metaThemeColorTag.setAttribute('content', '#171717');
 				}
 
@@ -103,7 +123,7 @@
 			})();
 		</script>
 
-		<title>Open WebUI</title>
+		<title>Prothemis</title>
 
 		%sveltekit.head%
 	</head>

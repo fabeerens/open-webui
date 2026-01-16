@@ -116,6 +116,7 @@ textarea::placeholder {
 
 .markdown a {
 	@apply underline;
+	color: #043D8C;
 }
 
 .font-primary {
@@ -687,11 +688,11 @@ input[type='number'] {
 
 body {
 	background: #fff;
-	color: #000;
+	color: #333333;
 }
 
 .dark body {
-	background: #171717;
+	background: #333333;
 	color: #eee;
 }
 

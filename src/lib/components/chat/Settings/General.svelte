@@ -168,6 +168,31 @@
 			}
 		}
 
+			// set button color variables per selected theme so UI changes immediately
+			// make all themes use the requested global button color
+			if (_theme.includes('system')) {
+				const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+				document.documentElement.style.setProperty('--color-button-bg', '#043D8C');
+				document.documentElement.style.setProperty('--color-button-text', '#ffffff');
+				document.documentElement.style.setProperty('--color-button-bg-hover', '#032f6f');
+			} else if (_theme.includes('oled')) {
+				document.documentElement.style.setProperty('--color-button-bg', '#043D8C');
+				document.documentElement.style.setProperty('--color-button-text', '#ffffff');
+				document.documentElement.style.setProperty('--color-button-bg-hover', '#032f6f');
+			} else if (_theme === 'light') {
+				document.documentElement.style.setProperty('--color-button-bg', '#043D8C');
+				document.documentElement.style.setProperty('--color-button-text', '#ffffff');
+				document.documentElement.style.setProperty('--color-button-bg-hover', '#032f6f');
+			} else if (_theme === 'her') {
+				document.documentElement.style.setProperty('--color-button-bg', '#043D8C');
+				document.documentElement.style.setProperty('--color-button-text', '#ffffff');
+				document.documentElement.style.setProperty('--color-button-bg-hover', '#032f6f');
+			} else {
+				document.documentElement.style.setProperty('--color-button-bg', '#043D8C');
+				document.documentElement.style.setProperty('--color-button-text', '#ffffff');
+				document.documentElement.style.setProperty('--color-button-bg-hover', '#032f6f');
+			}
+
 		if (typeof window !== 'undefined' && window.applyTheme) {
 			window.applyTheme();
 		}
